@@ -1,0 +1,74 @@
+.reasons {
+
+	@media (min-width: 751px) {
+		background-image: url(../images/reasons.jpg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+
+	@media ($phones) {
+		background-image: url(../images/reasons--mobile.jpg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+	
+
+	h2 {
+		color: #fff;
+	}
+
+	&__box {
+		padding-top: 40px;
+
+		.item {
+			display: inline-block;
+			vertical-align: top;
+			width: 33.33%;
+			margin: 0 -2px;
+			padding: 0 20px;
+			color: #fff;
+			margin-bottom: 45px;
+			font-size: 18px;
+			line-height: 26px;
+
+			@media ($tablets) {
+				width: 45%;
+			}
+			@media ($phones) {
+				width: 50%;
+				font-size: 16px;
+			}
+			@media (max-width: 650px) {
+				width: 290px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			i {
+				background-image: url(../images/reasons__sprite.png);
+				display: inline-block;
+			}
+
+			.icon {
+				height: 68px;
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+	.button {
+		height: auto;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		min-height: 60px;
+	}
+}
+
+.consult { background-position: -5px -0px; width: 75px; height: 60px; }
+.economy { background-position: -5px -65px; width: 75px; height: 68px; }
+.term { background-position: -5px -138px; width: 67px; height: 59px; }
+.sale { background-position: -5px -202px; width: 65px; height: 62px; }
+.price { background-position: -5px -269px; width: 53px; height: 58px; }

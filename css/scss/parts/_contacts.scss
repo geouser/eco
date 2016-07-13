@@ -1,9 +1,19 @@
 .contacts {
 	padding: 150px 0;
-	background-image: url(../images/contacts.jpg);
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: cover;
+
+	@media (min-width: 751px) {
+		background-image: url(../images/contacts.jpg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+
+	@media ($phones) {
+		background-image: url(../images/contacts--mobile.jpg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
 
 	@media ($tablets) {
 		padding: 100px 0;
@@ -26,7 +36,7 @@
 		&__address {
 			width: 58.33%;
 			background-color: $green;
-			padding: 60px 20px 60px 50px;
+			padding: 55px 20px 55px 50px;
 			text-align: left;
 			color: #fff;
 
@@ -43,7 +53,7 @@
 		&__inn {
 			width: 41.66%;
 			text-align: left;
-			padding: 60px 20px 60px 50px;
+			padding: 55px 20px 55px 50px;
 
 			@media ($tablets) {
 				padding: 40px 15px;
