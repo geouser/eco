@@ -1,0 +1,39 @@
+.button {
+	display: inline-block;
+	vertical-align: middle;
+	height: 60px;
+	color: #fff;
+	font-family: $rb;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 0 25px;
+	background-color: $orange;
+	border: none;
+	border-radius: 5px;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background-color: #FFD251;
+	}
+	&:focus {
+		background-color: #E8AE07;
+		-webkit-box-shadow: inset 0px 3px 3px 0px rgba(0,0,0,0.2);
+		-moz-box-shadow: inset 0px 3px 3px 0px rgba(0,0,0,0.2);
+		box-shadow: inset 0px 3px 3px 0px rgba(0,0,0,0.2);
+	}
+
+	&--small {
+		padding: 0 20px;
+		height: 45px;
+		font-size: 14px;
+	}
+
+
+	&--full {
+		width: 100%;
+		text-align: center;
+		padding: 0;
+	}
+}
