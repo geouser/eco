@@ -1,0 +1,58 @@
+// COLORS
+// ---------------------------
+$orange: 		#FCC013;
+$green: 		#6AB32D;
+$brown: 		#4A3D33;
+
+
+// FONTS
+// ---------------------------
+$rb: 			'robotobold';
+$rl: 			'robotolight';
+
+
+// RESPONSIVE
+// ---------------------------
+$tablets: 		'max-width: 1000px';
+$phones: 		'max-width: 750px';
+
+
+// TYPOGRAPHIC
+// ---------------------------
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: $rl;
+	color: #7c6555;
+}
+h2 {
+	font-family: $rb;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 36px;
+	color: #7c6555;
+}
+.white {
+	color: #FFF;
+}
+
+
+// lAYOUT
+// ---------------------------
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+    text-align: center;
+
+    @media ($tablets) {
+    	width: 100%;
+    	padding: 0 20px;
+    }
+
+    @media ($phones) {
+    	padding: 0 15px;
+    }
+}
