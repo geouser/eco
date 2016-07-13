@@ -1,0 +1,70 @@
+.contacts {
+	padding: 150px 0;
+	background-image: url(../images/contacts.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+
+	@media ($tablets) {
+		padding: 100px 0;
+	}
+
+	&__box {
+		width: 100%;
+		@include flex($alignI: start);
+		background-color: #fff;
+		font-size: 20px;
+
+		@media ($tablets) {
+			font-size: 16px;
+		}
+
+		@media ($phones) {
+			display: block;
+		}
+
+		&__address {
+			width: 58.33%;
+			background-color: $green;
+			padding: 60px 20px 60px 50px;
+			text-align: left;
+			color: #fff;
+
+			@media ($tablets) {
+				padding: 40px 15px;
+			}
+
+			@media ($phones) {
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		&__inn {
+			width: 41.66%;
+			text-align: left;
+			padding: 60px 20px 60px 50px;
+
+			@media ($tablets) {
+				padding: 40px 15px;
+			}
+
+			@media ($phones) {
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		p:not(:last-child) {
+			margin-bottom: 28px;
+
+			@media ($tablets) {
+				margin-bottom: 20px;
+			}
+		}
+
+		b {
+			font-family: $rb;
+		}
+	}
+}
