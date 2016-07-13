@@ -1,1 +1,1 @@
-# WaveLess dreamkiller basic template
+# МагаданЭкология
