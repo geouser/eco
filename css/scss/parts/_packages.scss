@@ -42,10 +42,12 @@
 
 			td {
 				position: relative;
-				padding: 20px 15px;
+				padding: 23px 15px;
+				line-height: 24px;
 
 				@media ($phones) {
 					padding: 20px 8px;
+					line-height: normal;
 				}
 
 				&:not(:last-child):after {
@@ -78,11 +80,6 @@
 
 				td:first-child {
 					text-align: left;
-					line-height: 24px;
-
-					@media ($phones) {
-						line-height: normal;
-					}
 				}
 			}
 
@@ -119,6 +116,12 @@
 			}
 
 			.button {
+				height: 50px;
+				font-size: 18px;
+				@media ($tablets) {
+					font-size: 16px;
+					height: 45px;
+				}
 				@media ($phones) {
 					padding-left: 0;
 					padding-right: 0;
