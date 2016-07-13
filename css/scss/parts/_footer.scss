@@ -1,0 +1,52 @@
+.footer {
+	background-color: $brown;
+	padding: 15px 0 10px;
+
+	.wrapper {
+		@include flex();
+
+		@media ($phones) {
+			display: block;
+		}
+	}
+
+	&__logo {
+		width: 25%;
+		text-align: left;
+
+		@media ($phones) {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		width: 50%;
+		color: #fff;
+		font-size: 14px;
+
+		@media ($phones) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__order {
+		width: 25%;
+		text-align: right;
+
+		@media ($phones) {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}

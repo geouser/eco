@@ -1,10 +1,10 @@
 @import 'mixfonset/reset';
-@import 'plugins/slick';
-@import 'plugins/slick-theme';
+
 @import 'plugins/magnific-popup';
 @import 'mixfonset/fonts';
 @import 'mixfonset/settings';
 @import 'mixfonset/mixins';
+@import 'parts/buttons';
 
 
 
@@ -255,4 +255,4 @@ nav ul {
 
 
 
-@import 'parts/buttons';
+@import 'parts/footer';
