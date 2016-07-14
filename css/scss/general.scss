@@ -30,18 +30,25 @@ CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $d
 
 
 */
-
-
+h1 {
+    font: 48px $rb;
+    color: #FFF;
+}
+section {
+    padding-bottom: 80px;
+}
 
 /*=====================================================================================*/
 /*  HEADER STYLES  */ 
          
 header {
-    @include position(absolute, 0, auto, auto, 0);
     width: 100%;
     z-index: 100;
-    background: #fff;
     margin: 0;
+    margin-top: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
     @include transition(all, .4s);
     
         /*.................media.............*/
@@ -62,76 +69,67 @@ header {
             }
         }
         /*.............end media..............*/
-
-
-    .header__top {
-        padding: 7px 0;
-        color: #FFF;
-        .wrapper {
+        
+         .header__bottom {
+            padding: 18px 0;
             @include flex();
         }
-        .divide {
-            height: 35px;
-            width: 1px;
-            vertical-align: middle;
-            background-color: #1E5D75;
+
+        .contactUs {
+            color: #FFF;
+            text-align: right;
+            * {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            div {
+                margin-right: 35px;
+            }
+            .tel {
+                font: 24px $rb;
+                color: #FFF;
+                display: block;
+            }
+            .mail {
+                font: 16px $rb;
+                color: $green;
+            }
         }
-    }
-    
-    .header__bottom {
-        padding: 30px 0;
-        background-color: #fff;
-        .wrapper {
-            @include flex();
-        }
-    }
 }
 
-
-/* ------------------------------------ */
-/*  LOGO STYLES  */
-
-.logo {
-    position: relative;
-    display: block;
-    & img {
-        height: 100%;
-        display: inline-block;
-        vertical-align: middle;   
-    }
-    & p {
-        display: inline-block;
-        vertical-align: middle;
-        padding-left: 18px;
-        text-transform: uppercase;
-        text-align: left;
-        padding-top: 6px;
-        span{
-         display: inline-block;
-        }
-        strong {
-            color: #000;
-            text-transform: none;
-            display: block;
-            margin-top: 5px;
-            padding-left: 2px;
-        }
-    }
-}
 
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
 
+nav {
+    @include position(fixed, 0 ,0, auto, 0);
+    height: 50px;
+    background-color: $brown;
+    .wrapper {
+        height: 100%;
+    }
+}
 nav ul {
     @include flex();
     list-style-type: none;
-    a {
-        display: inline-block;
-        margin: 0 20px;
-        text-decoration: none;
-        @include transition(all, .2s);             
-        &:hover {}
+    margin: 0;
+    height: 100%;
+    li {
+        text-align: center;
+        margin-right: -2px;
+        &:before {content: " | "; color: rgba(255,255,255, .1);}
+        &:first-child:before {display: none;}
+        a {
+            display: inline-block;
+            font: 12px $rb;
+            text-decoration: none;
+            color: #FFF;
+            text-transform: uppercase;
+            padding: 0 9px 0 7px;
+            @include transition(all, .2s);             
+            &:hover {}
+        }
     }
 
         /*.................media.............*/
@@ -147,6 +145,7 @@ nav ul {
             } 
         }
         /*.............end media.............*/
+    
 }
 
 
@@ -203,54 +202,213 @@ nav ul {
 
 
 .offer {
-    height: 100%;
-    min-height: 650px;
-    max-height: 900px;
-    background: url('../images/law.jpg') no-repeat center center;
+    height: 850px;
+    background: url('../images/offerBg.jpg') no-repeat center center;
     background-size: cover;
-    padding: 200px 0 0 0;
     position: relative;
-
-
-    .offerInfo {
-        height: 100%;
-        @include flex($alignI: center, $justify: space-around, $direction: column);
-        z-index: 2;
-        position: relative;
-        text-align: center;
+    padding-top: 220px;
+    h1 {
+        margin-top: 40px;
     }
 
+
+    &__form {
+        margin-top: 65px;
+        @include flex();
+        &__text {
+            width: 500px;
+            padding: 43px 50px 47px 0;
+            color: #FFF;
+            font-family: $rl;
+            font-size: 18px;
+            background-image: url("../images/offerFormTExtBg.png");
+            -webkit-background-size: 100% 100%;
+                 -o-background-size: 100% 100%;
+                    background-size: 100% 100%;
+            .title {
+                font: 48px $rb;
+                color: $green;
+                display: block;
+            }
+            .pr {
+                display: block;
+                color: $orange;
+                width: 100%;
+                text-align: center;
+                font: 28px/46px $rb;    
+            }
+        }
+    }
+
+}
+
+form {
+    width: 320px;
+    background-color: #FFF;
+    padding: 34px 32px;
+    p {
+        font: 23px $rb;
+        color: $brown;
+        margin-bottom: 16px;
+    }
+    input {
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        font: 15px $rl;
+        color: $brown;
+        border: none;
+        background-color: #EDEDED;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        margin-bottom: 15px;
+        -webkit-border-radius: 6px;
+                border-radius: 6px;
+    }
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+       color: #A4A4A4;
+    }
+    :-moz-placeholder {
+        color: #A4A4A4;
+        opacity: 0;
+    }
+    .button {
+        font-size: 15px;
+    }
 }
 
 
 
 /*=====================================================================================*/
-/*  STYLES  */ 
+/*  ABOUT STYLES  */ 
 
-
-.infoBlocks {
-    @include flex($alignI: top, $justify: center, $wrap: wrap);
-      
-    .infoBlock  {
-        margin-bottom: 20px;
-        padding: 0 20px;
-        text-align: center;
-        border: 1px solid peru;
-        &_icon {
-            width: 150px;
-            height: 150px;
-            text-align: center;
-            margin: 10px auto 15px;
-            }
-        }
-
-    &.--two  .infoBlock   {    width: 50%;}
-    &.--four .infoBlock   {    width: 25%;}
-    &.--three .infoBlock  {    width: 33%;}
+.about {
+    padding-bottom: 320px;
+    background-color: #F9F8F1;
+    background-image: url("../images/aboutBg.jpg");
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    p {
+        line-height: 30px;
+        margin-top: 35px;
+    }
 }
 
+.numbersInfo {
+    @include flex($justify : space-between, $alignI: flex-start);
+    margin-top: 80px;
+    &__item {
+        width: 200px;
+        background-color: #F1EED7;
+        padding-top: 45px;
+        text-align: center;
+        height: 110px;
+        position: relative;
+        font: 20px/24px $rl;
+        padding-bottom: 10px;
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            width: 98%;
+        }
+        &:before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            margin-right: -3px;
+        }
+        &:after {
+            content: attr(data-num);
+            width: 70px;
+            height: 70px;
+            background-color: $green;
+            color: #FFF;
+            text-align: center;
+            position: absolute;
+            left: 0; right: 0;
+            margin: auto;
+            top: -35px;
+            font: 30px/70px $rb;
+            -webkit-border-radius: 50%;
+                    border-radius: 50%;
+        }
+    }
+}
+
+/*=====================================================================================*/
+/*  SERVICES STYLES  */ 
 
 
+.services {
+    background-color: #4A3D33;
+}
+.servicesInfo {
+     @include flex($alignI: flex-start, $wrap: wrap);
+     margin: 50px auto;
+     &__item {
+         width: 50%;
+         height: 380px;
+         padding: 30px 5px;
+         text-align: left;
+         background-size: cover;
+         h3 {
+             display: inline-block; padding: 0 30px;
+             font: 30px/60px $rb;
+             color: #FFF;
+             background-color: $orange;
+             margin-bottom: 25px;
+             margin-left: -5px;
+         }
+         &--white {
+             background-color: #FFF;
+             .servicesInfo__item__list {
+                 color: $brown;
+             }
+         }
+         &--middle {
+             &:before {
+                 content: "";
+                 height: 100%;
+                 display: inline-block;
+                 vertical-align: middle;
+             }
+             .exclaim {
+                 display: inline-block;
+                 vertical-align: middle;
+                 max-width: 98%;
+             }
+         }
+         &__list {
+             list-style-type: none;
+             color: #FFF;
+             font: 16px $rl;
+             li {
+                 margin-bottom: 12px;
+                 padding-left: 45px;
+                 position: relative;
+                 &:before {
+                        content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 5px;
+                    left: 26px;
+                    margin-right: 5px;
+                    width: 11px;
+                    height: 8px;
+                    background-image: url("../images/check.png");
+                    background-size: 100% 100%;
+                 }
+             }
+         }
+         .exclaim {
+             font: 24px $rb;
+             margin-bottom: 20px;
+             text-align: center;
+         }
+     }
+}
 
 @import 'parts/convoy';
 @import 'parts/packages';
