@@ -1,0 +1,75 @@
+.about {
+	background-color: #F9F8F1;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
+	padding-bottom: 17%;
+
+	h2 {
+		margin-bottom: 32px;
+	}
+
+	p {
+		margin-bottom: 30px;
+		line-height: 30px;
+
+		@media ($phones) {
+			line-height: normal;
+		}
+	}
+
+	@media (min-width: 751px) {
+		background-image: url(../images/about.jpg);
+	}
+	@media ($phones) {
+		background-image: url(../images/about--mobile.jpg);
+		padding-bottom: 28%;
+	}
+}
+
+.facts {
+	padding-top: 45px;
+
+	&__item {
+		width: 200px;
+		height: 100px;
+		padding-top: 35px;
+		position: relative;
+		background-color: #F1EED7;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 30px;
+		@extend %vertAlign;
+
+		@media ($phones) {
+			margin-bottom: 70px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&:after {
+			content: attr(data-counter);
+			height: 70px;
+			width: 70px;
+			border-radius: 50%;
+			background-color: $green;
+			position: absolute;
+			left: 50%;
+			margin-left: -35px;
+			top: -35px;
+			line-height: 70px;
+			font-family: $rb;
+			font-size: 30px;
+			color: #fff;
+		}
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 95%;
+			font-size: 20px;
+		}
+	}
+}

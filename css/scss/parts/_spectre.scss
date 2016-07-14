@@ -1,0 +1,121 @@
+.spectre {
+	background-color: $brown;
+
+	h2 {
+		color: #fff;
+	}
+}
+
+.spectre__box {
+	margin: 40px 0;
+	@extend %clearfix;
+
+	.item {
+		width: 50%;
+		height: 380px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		@media ($phones) {
+			width: 100%;
+			height: auto;
+			padding-bottom: 40px;
+			float: none;
+		}
+
+		ul {
+			display: block;
+			margin: 24px 0 0 0;
+			padding-left: 30px;
+			text-align: left;
+
+			@media ($tablets) {
+				padding-left: 15px;
+			}
+
+			li {
+				list-style: none;
+				padding-left: 20px;
+				padding-right: 20px;
+				position: relative;
+				margin-bottom: 14px;
+				font-size: 16px;
+
+				@media ($tablets) {
+					font-size: 15px;
+					margin-bottom: 10px;
+				}
+
+				&:before {
+					content: '';
+					width: 10px;
+					height: 10px;
+					background-image: url(../images/check.png);
+					background-repeat: no-repeat;
+					background-size: 100%;
+					background-position: 50% 50%;
+					position: absolute;
+					left: 0;
+					top: 6px;
+				}
+			}
+		}
+
+		&.water {
+			background-image: url(../images/water.jpg);
+		}
+		&.air {
+			background-image: url(../images/air.jpg);
+		}
+		&.garbage {
+			background-image: url(../images/garbage.jpg);
+		}
+
+		&--bg {
+			color: #fff;
+			padding-top: 30px;
+
+			.title {
+				display: block;
+				width: 185px;
+				background-color: $orange;
+				font-size: 30px;
+				font-family: $rb;
+				text-transform: uppercase;
+				padding: 10px 0 9px;
+			}
+		}
+
+		&--simple {
+			background-color: #fff;
+			padding-top: 42px;
+
+			.title {
+				font-family: $rb;
+				font-size: 24px;
+			}
+
+			ul {
+				margin-top: 19px;
+			}
+		}
+
+		&--vertical {
+			padding-top: 0;
+			padding-right: 0;
+			@extend %vertAlign;
+			text-align: center;
+
+			@media ($phones) {
+				padding-top: 42px;
+			}
+
+			.title {
+				display: inline-block;
+				vertical-align: middle;
+				max-width: 95%;
+			}
+		}
+	}
+}
